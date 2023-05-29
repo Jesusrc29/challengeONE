@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador - ONE</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./imagenes/imgLogo.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <img class="logo" src="./imagenes/imgLogo.svg" alt="logo alura" id="imglogo">
+            <h1 class="titulo_logo" id="titulo">Encriptador & Desencriptador - ONE</h1>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="contenedor">
+            <div class="modo">
+                <label for="toggle" id="label">
+                    <i class="fa-solid fa-moon"></i></label>
+                <input type="checkbox" id="toggle">
+            </div>
+            <div class="encriptador">
+                <form class="encriptador_form">
+                    <div class="texto_en_area">
+                        <textarea name="texto" id="texto" placeholder="Ingrese el texto aquí..."></textarea>
+                        <body onload="document.getElementById('texto').focus();">
+                            <div class="texto_info">
+                                <div class="info">
+                                    <img src="./imagenes/imgInfo.png">
+                                    <p id="advertencia">Solo letras minúsculas y sin acentos.</p>
+                                </div>
+                            </div>
+
+                            <div class="btn">
+                                <button id="encri" class="btn_encriptar" type="button"><img
+                                        src="./imagenes/imgEncriptar.png"> Encriptar</button>
+
+                                <button id="desencri" class="btn_desencriptar" type="button"><img
+                                        src="./imagenes/imgDesencriptar.png"> Desencriptar</button>
+                            </div>
+                    </div>
+                </form>
+                <div class="resultado">
+                    <div class="contenedor_resultado">
+                        <div class="contenido_no_resuelto" id="noResuelto">
+                            <div class="imagen_resultado">
+                                <img src="./imagenes/imgFondo.png" alt="fondo">
+                            </div>
+                            <p>No has ingresado ningún mensaje.</p>
+                            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                        </div>
+
+                        <div class="contenido_resuelto" id="resuelto">
+                            <textarea name="texto_resultado" id="textoResultado" disabled></textarea>
+                            <button id="copiar" type="button"><img src="./imagenes/imgCopiar.png"> Copiar</button>
+                        </div>
+
+                    </div>
+                </div>
+    </main>
+
+    <footer><br><br><br><br>
+        <p class="copyright">© Desarrollado por Jesus Romero: <a
+                href="https://www.linkedin.com/in/jesus-romero-canales-160791271/" target="_blank">LinkedIn</a> - <a
+                href="https://github.com/Jesusrc29" target="_blank">Github</a></p>
+    </footer>
+    <script src="procesos.js"></script>
+</body>
+
+</html>
