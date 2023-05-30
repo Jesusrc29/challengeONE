@@ -10,6 +10,7 @@ let label = document.getElementById("label");
 let advertencia = document.getElementById("advertencia");
 let titulo = document.getElementById("titulo");
 let noResuelto = document.getElementById("noResuelto");
+
 toggle.addEventListener("change", (event) => {
   let estado = event.target.checked;
   document.body.classList.toggle("oscuro");
@@ -34,7 +35,12 @@ function encriptar() {
   let Acentos = /[áéíóúÁÉÍÓÚ]/;
 
   if (Mayusculas.test(texto) || Acentos.test(texto)) {
-    alert("Error: Ha ingresado mayúsculas y/o acentos. Intente de nuevo.");
+    //alert("Error: Ha ingresado mayúsculas y/o acentos. Intente de nuevo.");
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: 'Ha ingresado mayúsculas y/o acentos. Intente de nuevo.',
+    })
     textoIngresado.focus();
   } else {
     let textoEncriptado = texto
